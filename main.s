@@ -1,5 +1,7 @@
 .global main
 
+.bss
+
 .data
 
 .p2align 4
@@ -8,6 +10,7 @@ age:
     .quad 30
 
 .text
+
 .section .rodata.msghello
 msghello:
     .asciz "Hello World Message!"
