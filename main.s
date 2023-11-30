@@ -11,6 +11,7 @@ age:
 
 .text
 
+.p2align 4
 .section .rodata.msghello
 msghello:
     .asciz "Hello World Message!"
