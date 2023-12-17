@@ -21,5 +21,6 @@ msghello:
 main:
     leaq msghello(%rip), %rdi
     call puts
+    xor %rax, %rax
     ret
     
