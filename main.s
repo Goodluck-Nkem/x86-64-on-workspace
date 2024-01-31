@@ -12,15 +12,25 @@ age:
 .text
 
 .p2align 4
-.section .rodata.msghello
+.section .data.msghello
 msghello:
     .asciz "Hello World Message!"
 
 .p2align 4
 .section .text.main
 main:
+#	push %rbp 					# align stack
     leaq msghello(%rip), %rdi
+	movb $'Y', (%rdi) 
     call puts
     xor %rax, %rax
+#	pop %rbp					# restore stack pointer
+
+.intel_syntax noprefix
+	lea rdi, [rip + msghello] 	# load message
+	mov BYTE PTR [rdi], 'H'
+	call puts 
+	xor rax, rax
     ret
-    
+
+.section .note.GNU-stack
