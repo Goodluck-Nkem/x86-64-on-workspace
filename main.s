@@ -14,7 +14,7 @@ age:
 .p2align 4
 .section .data.msghello
 msghello:
-    .asciz "Hello World Message!"
+    .asciz "Hello World from Storm!"
 
 .p2align 4
 .section .text.main
