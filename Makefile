@@ -7,7 +7,7 @@ qemu:
 	qemu-x86_64 ./x64.hello
 
 vuln:
-	gcc -g -no-pie -std=c99 -fno-stack-protector -z execstack vuln.c -o vuln
+	gcc -g -no-pie -std=c99 -fno-stack-protector -z execstack vuln.c -o vuln.out
 
 clean:
 	rm -f x64.hello
